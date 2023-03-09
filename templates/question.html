@@ -4,7 +4,7 @@
   <h1>{{ question.prompt }}</h1>
 
   <form action="/answer" method="POST">
-
+    {% for choice in question.prompt %}
       <!-- you should have one item like this for every choice -->
       <p>
         <input
@@ -13,7 +13,7 @@
             value="value-goes-here">
         choice-goes-here
       </p>
-
+      {% endfor %}
     <button>Continue</button>
   </form>
 
